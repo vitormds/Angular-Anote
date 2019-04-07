@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { NotesComponent } from './notes/notes.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     FeedbackComponent,
-    NotesComponent
+    NotesComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule
