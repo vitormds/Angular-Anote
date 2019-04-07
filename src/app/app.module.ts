@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent
+    NavigationComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule
