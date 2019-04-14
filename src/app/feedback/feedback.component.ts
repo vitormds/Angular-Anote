@@ -1,3 +1,4 @@
+import { ApiService } from './../shared/api.service';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -13,22 +14,21 @@ export class FeedbackComponent implements OnInit {
     feedback:''
   };
 
-  constructor(private http: HttpClient) {
+  constructor(private apiService: ApiService) {
 
    }
 
   ngOnInit() {
   }
 sendFeedback(): void{
-  console.log(this.model);
-  let url = "http://localhost:8080/api/feedback";
-  this.http.post(url,this.model).subscribe(
+  this.apiService.postFeedback(this.model).subscribe(
     res => {
-      console.log(this.model);
+      
       location.reload();
+      console.log(this.model);
     },
     err => {
-      alert("Erro enquanto enviava o comentário");
+         alert("Erro enquanto enviava o comentário");
     }
   );
 }
