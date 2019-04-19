@@ -8,6 +8,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import {Router, Routes, RouterModule} from "@angular/router";
 import {FormsModule} from  '@angular/forms';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
+import { NoteComponent } from './note/note.component';
 const appRoutes :Routes = [
   {
     path:'notes',
@@ -33,7 +34,8 @@ const appRoutes :Routes = [
     NavigationComponent,
     FeedbackComponent,
     NotesComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    NoteComponent
   ],
   imports: [
     BrowserModule,
